@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C8FCBF351A8BF01300AC8AD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCBF341A8BF01300AC8AD1 /* AppDelegate.swift */; };
-		C8FCBF371A8BF01300AC8AD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCBF361A8BF01300AC8AD1 /* ViewController.swift */; };
+		C8FCBF371A8BF01300AC8AD1 /* CharacterMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCBF361A8BF01300AC8AD1 /* CharacterMasterViewController.swift */; };
 		C8FCBF3A1A8BF01300AC8AD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8FCBF381A8BF01300AC8AD1 /* Main.storyboard */; };
 		C8FCBF3C1A8BF01300AC8AD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8FCBF3B1A8BF01300AC8AD1 /* Images.xcassets */; };
 		C8FCBF3F1A8BF01300AC8AD1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8FCBF3D1A8BF01300AC8AD1 /* LaunchScreen.xib */; };
 		C8FCBF4B1A8BF01300AC8AD1 /* Betrayal_Character_StatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCBF4A1A8BF01300AC8AD1 /* Betrayal_Character_StatsTests.swift */; };
+		C8FCBF551A8BF14800AC8AD1 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCBF541A8BF14800AC8AD1 /* CharacterDetailViewController.swift */; };
+		C8FCBF591A8C05C800AC8AD1 /* CharacterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCBF581A8C05C800AC8AD1 /* CharacterData.swift */; };
+		C8FCBF5B1A8C0C0F00AC8AD1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCBF5A1A8C0C0F00AC8AD1 /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +32,16 @@
 		C8FCBF2F1A8BF01300AC8AD1 /* Betrayal Character Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Betrayal Character Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8FCBF331A8BF01300AC8AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8FCBF341A8BF01300AC8AD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C8FCBF361A8BF01300AC8AD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8FCBF361A8BF01300AC8AD1 /* CharacterMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMasterViewController.swift; sourceTree = "<group>"; };
 		C8FCBF391A8BF01300AC8AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8FCBF3B1A8BF01300AC8AD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C8FCBF3E1A8BF01300AC8AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C8FCBF441A8BF01300AC8AD1 /* Betrayal Character StatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Betrayal Character StatsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8FCBF491A8BF01300AC8AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8FCBF4A1A8BF01300AC8AD1 /* Betrayal_Character_StatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Betrayal_Character_StatsTests.swift; sourceTree = "<group>"; };
+		C8FCBF541A8BF14800AC8AD1 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		C8FCBF581A8C05C800AC8AD1 /* CharacterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterData.swift; sourceTree = "<group>"; };
+		C8FCBF5A1A8C0C0F00AC8AD1 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				C8FCBF341A8BF01300AC8AD1 /* AppDelegate.swift */,
-				C8FCBF361A8BF01300AC8AD1 /* ViewController.swift */,
+				C8FCBF361A8BF01300AC8AD1 /* CharacterMasterViewController.swift */,
+				C8FCBF541A8BF14800AC8AD1 /* CharacterDetailViewController.swift */,
+				C8FCBF581A8C05C800AC8AD1 /* CharacterData.swift */,
+				C8FCBF5A1A8C0C0F00AC8AD1 /* Character.swift */,
 				C8FCBF381A8BF01300AC8AD1 /* Main.storyboard */,
 				C8FCBF3B1A8BF01300AC8AD1 /* Images.xcassets */,
 				C8FCBF3D1A8BF01300AC8AD1 /* LaunchScreen.xib */,
@@ -212,7 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8FCBF371A8BF01300AC8AD1 /* ViewController.swift in Sources */,
+				C8FCBF371A8BF01300AC8AD1 /* CharacterMasterViewController.swift in Sources */,
+				C8FCBF591A8C05C800AC8AD1 /* CharacterData.swift in Sources */,
+				C8FCBF5B1A8C0C0F00AC8AD1 /* Character.swift in Sources */,
+				C8FCBF551A8BF14800AC8AD1 /* CharacterDetailViewController.swift in Sources */,
 				C8FCBF351A8BF01300AC8AD1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
