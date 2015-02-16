@@ -65,11 +65,22 @@ class CharacterMasterViewController: UIViewController {
     }
     
     @IBAction func resetCharacters(sender: AnyObject) {
-        characterCardArray.removeAll()
-        for index in 0..<characterImageViewArray.count {
-            let characterCard = CharacterCard(index: index)
-            characterCardArray.append(characterCard)
-        }
+        var refreshAlert = UIAlertController(title: "Reset Characters", message: "All current stats will be lost.", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+            self.characterCardArray.removeAll()
+            for index in 0..<self.characterImageViewArray.count {
+                let characterCard = CharacterCard(index: index)
+                self.characterCardArray.append(characterCard)
+            }
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
+            //CANCEL reset action
+        }))
+        
+        presentViewController(refreshAlert, animated: true, completion: nil)
+
     }
 
 }
