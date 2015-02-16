@@ -9,31 +9,37 @@
 import Foundation
 import UIKit
 
-struct Character {
-    enum CharacterType: Int {
-        case Jock = 0, FinalGirl, Professor, FortuneTeller, LittleGirl, CuriousBoy
-    }
-    var aStats: [String:String] = [:]
-    var bStats: [String:String] = [:]
-    var backgroundColor: UIColor = UIColor.clearColor()
+class Character {
+
+    var speed: CharacterStat
+    var might: CharacterStat
+    var sanity: CharacterStat
+    var knowledge: CharacterStat
     
-    init(index: Int) {
-        if let characterType = CharacterType(rawValue: index) {
-            let characterData = CharacterData().characterDataFromCharacterType(characterType)
-            let backgroundColorDictionary = characterData["backgroundColor"]!
-            backgroundColor = colorFromDictionary(backgroundColorDictionary)
-        }
-    }
+    var name: String
     
-    func colorFromDictionary(colorDictionary: [String:String]) -> UIColor {
-        var redString: String = colorDictionary["red"]!
-        let red: CGFloat = CGFloat(redString.toInt()!)
-        var greenString: String = colorDictionary["green"]!
-        let green: CGFloat = CGFloat(greenString.toInt()!)
-        var blueString: String = colorDictionary["blue"]!
-        let blue: CGFloat = CGFloat(blueString.toInt()!)
-        var alphaString: String = colorDictionary["alpha"]!
-//        let alpha: CGFloat = CGFloat(alphaString.toInt()!)
-        return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: 1.0)
+    init(characterData: [String:String], characterStats: [String:[String:Any]]) {
+        self.name = characterData["name"]!
+        
+        var speed = characterStats["speed"]! as [String:Any]
+        var speedStartIndex = speed["startingIndex"]! as Int
+        var speedArray = speed["valuesArray"]! as [Int]
+        self.speed = CharacterStat(statType: CharacterStat.StatType.speed, startingIndex: speedStartIndex, values: speedArray)
+        
+        var might = characterStats["might"]! as [String:Any]
+        var mightStartIndex = might["startingIndex"]! as Int
+        var mightArray = might["valuesArray"]! as [Int]
+        self.might = CharacterStat(statType: CharacterStat.StatType.might, startingIndex: mightStartIndex, values: mightArray)
+        
+        var sanity = characterStats["sanity"]! as [String:Any]
+        var sanityStartIndex = sanity["startingIndex"]! as Int
+        var sanityArray = sanity["valuesArray"]! as [Int]
+        self.sanity = CharacterStat(statType: CharacterStat.StatType.sanity, startingIndex: sanityStartIndex, values: sanityArray)
+        
+        var knowledge = characterStats["knowledge"]! as [String:Any]
+        var knowledgeStartIndex = knowledge["startingIndex"]! as Int
+        var knowledgeArray = knowledge["valuesArray"]! as [Int]
+        self.knowledge = CharacterStat(statType: CharacterStat.StatType.knowledge, startingIndex: knowledgeStartIndex, values: knowledgeArray)
     }
+
 }

@@ -16,6 +16,8 @@
 		C8FCBF551A8BF14800AC8AD1 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCBF541A8BF14800AC8AD1 /* CharacterDetailViewController.swift */; };
 		C8FCBF591A8C05C800AC8AD1 /* CharacterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCBF581A8C05C800AC8AD1 /* CharacterData.swift */; };
 		C8FCBF5B1A8C0C0F00AC8AD1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCBF5A1A8C0C0F00AC8AD1 /* Character.swift */; };
+		C8FCBF5D1A8D35FB00AC8AD1 /* CharacterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCBF5C1A8D35FB00AC8AD1 /* CharacterCard.swift */; };
+		C8FCBF5F1A8D38BA00AC8AD1 /* CharacterStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCBF5E1A8D38BA00AC8AD1 /* CharacterStat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		C8FCBF541A8BF14800AC8AD1 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		C8FCBF581A8C05C800AC8AD1 /* CharacterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterData.swift; sourceTree = "<group>"; };
 		C8FCBF5A1A8C0C0F00AC8AD1 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		C8FCBF5C1A8D35FB00AC8AD1 /* CharacterCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCard.swift; sourceTree = "<group>"; };
+		C8FCBF5E1A8D38BA00AC8AD1 /* CharacterStat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterStat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,9 @@
 				C8FCBF361A8BF01300AC8AD1 /* CharacterMasterViewController.swift */,
 				C8FCBF541A8BF14800AC8AD1 /* CharacterDetailViewController.swift */,
 				C8FCBF581A8C05C800AC8AD1 /* CharacterData.swift */,
+				C8FCBF5C1A8D35FB00AC8AD1 /* CharacterCard.swift */,
 				C8FCBF5A1A8C0C0F00AC8AD1 /* Character.swift */,
+				C8FCBF5E1A8D38BA00AC8AD1 /* CharacterStat.swift */,
 				C8FCBF381A8BF01300AC8AD1 /* Main.storyboard */,
 				C8FCBF3B1A8BF01300AC8AD1 /* Images.xcassets */,
 				C8FCBF3D1A8BF01300AC8AD1 /* LaunchScreen.xib */,
@@ -224,7 +230,9 @@
 				C8FCBF371A8BF01300AC8AD1 /* CharacterMasterViewController.swift in Sources */,
 				C8FCBF591A8C05C800AC8AD1 /* CharacterData.swift in Sources */,
 				C8FCBF5B1A8C0C0F00AC8AD1 /* Character.swift in Sources */,
+				C8FCBF5D1A8D35FB00AC8AD1 /* CharacterCard.swift in Sources */,
 				C8FCBF551A8BF14800AC8AD1 /* CharacterDetailViewController.swift in Sources */,
+				C8FCBF5F1A8D38BA00AC8AD1 /* CharacterStat.swift in Sources */,
 				C8FCBF351A8BF01300AC8AD1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

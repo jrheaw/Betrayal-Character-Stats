@@ -19,7 +19,10 @@ class CharacterMasterViewController: UIViewController {
     @IBOutlet weak var littleGirlImageView: UIImageView!
     @IBOutlet weak var curiousBoyImageView: UIImageView!
     
+    var characterCardArray: [CharacterCard] = []
+    
     override func viewDidLoad() {
+        println("view did load")
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -33,10 +36,11 @@ class CharacterMasterViewController: UIViewController {
         ]
         
         for index in 0..<characterImageViewArray.count {
-            let character = Character(index: index)
+            let characterCard = CharacterCard(index: index)
+            characterCardArray.append(characterCard)
             let characterImageView = characterImageViewArray[index]
 //            playlistImageView.image = playlist.icon
-            characterImageView.backgroundColor = character.backgroundColor
+            characterImageView.backgroundColor = characterCard.backgroundColor
         }
     }
 
@@ -49,15 +53,23 @@ class CharacterMasterViewController: UIViewController {
         if segue.identifier == "showCharacterDetails" {
             let characterImageView = sender!.view as UIImageView
             if let index = find(characterImageViewArray, characterImageView) {
-//                let playlistDetailController = segue.destinationViewController as PlaylistDetailViewController
-//                playlistDetailController.playlist = Playlist(index: index)
-                println("selected at \(index)")
+                let characterDetailController = segue.destinationViewController as CharacterDetailViewController
+                characterDetailController.characterCard = characterCardArray[index]
+                characterDetailController.characterCardArray = characterCardArray
             }
         }
     }
 
     @IBAction func characterSelected(sender: AnyObject) {
          performSegueWithIdentifier("showCharacterDetails", sender: sender)
+    }
+    
+    @IBAction func resetCharacters(sender: AnyObject) {
+        characterCardArray.removeAll()
+        for index in 0..<characterImageViewArray.count {
+            let characterCard = CharacterCard(index: index)
+            characterCardArray.append(characterCard)
+        }
     }
 
 }
