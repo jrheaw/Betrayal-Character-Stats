@@ -427,6 +427,7 @@
 				C8FCBF501A8BF01300AC8AD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8FCBF511A8BF01300AC8AD1 /* Build configuration list for PBXNativeTarget "Betrayal Character StatsTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +436,7 @@
 				C8FCBF531A8BF01300AC8AD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

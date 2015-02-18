@@ -12,10 +12,12 @@ import Foundation
 struct CharacterData {
     let jock: [String:Any] = [
         "a":[
-            "name": "Ox Bellows"
+            "name": "Ox Bellows",
+            "icon": "ox.pdf"
         ],
         "b":[
-            "name":"Farrin \"Flash\" Williams"
+            "name":"Darrin \"Flash\" Williams",
+            "icon": "darrin.pdf"
         ],
         "backgroundColor": ["red": 158, "green": 50, "blue": 63, "alpha": 1.0]
     ]
@@ -59,10 +61,12 @@ struct CharacterData {
     ]
     let finalGirl: [String:Any] = [
         "a":[
-            "name":"Jenny LeClerc"
+            "name":"Jenny LeClerc",
+            "icon": "jenny.pdf"
         ],
         "b":[
-            "name":"Heather Granville"
+            "name":"Heather Granville",
+            "icon": "heather.pdf"
         ],
         "backgroundColor": ["red": 119, "green": 64, "blue": 103, "alpha": 1.0]
     ]
@@ -106,12 +110,15 @@ struct CharacterData {
     ]
     let professor: [String:Any] = [
         "a":[
-            "name":"Father Rhinehardt"
+            "name":"Father Rhinehardt",
+            "icon": "father.pdf"
         ],
         "b":[
             "name":"Professor Longfellow"
+            ,
+            "icon": "professor.pdf"
         ],
-        "backgroundColor": ["red": 207, "green": 208, "blue": 210, "alpha": 1.0]
+        "backgroundColor": ["red": 170, "green": 170, "blue": 170, "alpha": 1.0]
     ]
     let professorStats: [String:[String:[String:Any]]] = [
         "a": [
@@ -153,10 +160,12 @@ struct CharacterData {
     ]
     let fortuneTeller: [String:Any] = [
         "a":[
-            "name":"Madame Zostra"
+            "name":"Madame Zostra",
+            "icon": "madame.pdf"
         ],
         "b":[
-            "name":"Vivian Lopez"
+            "name":"Vivian Lopez",
+            "icon": "vivian.pdf"
         ],
         "backgroundColor": ["red": 12, "green": 120, "blue": 146, "alpha": 1.0]
     ]
@@ -200,10 +209,12 @@ struct CharacterData {
     ]
     let littleGirl: [String:Any] = [
         "a":[
-            "name":"Zoe Ingstrom"
+            "name":"Zoe Ingstrom",
+            "icon": "zoe.pdf"
         ],
         "b":[
-            "name":"Missy Dubourde"
+            "name":"Missy Dubourde",
+            "icon": "missy.pdf"
         ],
         "backgroundColor": ["red": 206, "green": 141, "blue": 57, "alpha": 1.0]
     ]
@@ -247,10 +258,12 @@ struct CharacterData {
     ]
     let curiousBoy: [String:Any] = [
         "a":[
-            "name":"Brandon Jaspers"
+            "name":"Brandon Jaspers",
+            "icon": "brandon.pdf"
         ],
         "b":[
-            "name":"Peter Akimoto"
+            "name":"Peter Akimoto",
+            "icon": "peter.pdf"
         ],
         "backgroundColor": ["red": 112, "green": 167, "blue": 99, "alpha": 1.0]
     ]

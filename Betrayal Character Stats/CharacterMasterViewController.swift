@@ -39,7 +39,7 @@ class CharacterMasterViewController: UIViewController {
             let characterCard = CharacterCard(index: index)
             characterCardArray.append(characterCard)
             let characterImageView = characterImageViewArray[index]
-//            playlistImageView.image = playlist.icon
+            characterImageView.image = characterCard.getSelectedCharacter()?.icon
             characterImageView.backgroundColor = characterCard.backgroundColor
         }
     }
