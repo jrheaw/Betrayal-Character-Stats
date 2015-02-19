@@ -171,13 +171,13 @@
                                 <rect key="frame" x="0.0" y="203" width="600" height="99"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Might" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ys6-Nj-sDH">
-                                        <rect key="frame" x="278" y="8" width="44" height="21"/>
+                                        <rect key="frame" x="278" y="16" width="44" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygL-ns-DFf">
-                                        <rect key="frame" x="140" y="-31" width="320" height="162"/>
+                                        <rect key="frame" x="140" y="-21" width="320" height="162"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </pickerView>
                                 </subviews>
@@ -188,13 +188,13 @@
                                     <constraint firstItem="Ys6-Nj-sDH" firstAttribute="top" secondItem="A2d-SM-dqK" secondAttribute="top" constant="8" id="2oY-7u-J82"/>
                                     <constraint firstAttribute="width" secondItem="A2d-SM-dqK" secondAttribute="height" multiplier="140:67" id="4lh-jI-llA"/>
                                     <constraint firstAttribute="centerX" secondItem="ygL-ns-DFf" secondAttribute="centerX" constant="-1" id="BHw-gB-IaA"/>
-                                    <constraint firstItem="Ys6-Nj-sDH" firstAttribute="top" secondItem="A2d-SM-dqK" secondAttribute="top" constant="8" id="RSB-rW-Bjp"/>
+                                    <constraint firstItem="Ys6-Nj-sDH" firstAttribute="top" secondItem="A2d-SM-dqK" secondAttribute="top" constant="16" id="RSB-rW-Bjp"/>
                                     <constraint firstAttribute="width" constant="224" id="UMS-is-uCY"/>
                                     <constraint firstAttribute="bottom" secondItem="Ys6-Nj-sDH" secondAttribute="bottom" constant="73" id="eqE-Zx-FaD"/>
                                     <constraint firstAttribute="height" constant="162" id="fMY-W3-3gR"/>
                                     <constraint firstAttribute="centerX" secondItem="ygL-ns-DFf" secondAttribute="centerX" id="fv2-nj-6Yi"/>
                                     <constraint firstAttribute="centerX" secondItem="Ys6-Nj-sDH" secondAttribute="centerX" id="hx8-c5-CX2"/>
-                                    <constraint firstAttribute="centerY" secondItem="ygL-ns-DFf" secondAttribute="centerY" id="qHL-Sk-806"/>
+                                    <constraint firstAttribute="centerY" secondItem="ygL-ns-DFf" secondAttribute="centerY" constant="-10" id="qHL-Sk-806"/>
                                     <constraint firstAttribute="centerY" secondItem="ygL-ns-DFf" secondAttribute="centerY" constant="-30" id="vLK-g2-D3h"/>
                                     <constraint firstItem="Ys6-Nj-sDH" firstAttribute="top" secondItem="A2d-SM-dqK" secondAttribute="top" constant="8" id="ynW-tK-RCp"/>
                                 </constraints>
@@ -216,13 +216,13 @@
                                 <rect key="frame" x="0.0" y="302" width="600" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iP-qz-uP1">
-                                        <rect key="frame" x="274" y="8" width="50" height="21"/>
+                                        <rect key="frame" x="274" y="11" width="50" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9d-xz-2Nz">
-                                        <rect key="frame" x="140" y="-31" width="320" height="162"/>
+                                        <rect key="frame" x="140" y="-24" width="320" height="162"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </pickerView>
                                 </subviews>
@@ -230,10 +230,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="157" id="0VF-CX-bY4"/>
                                     <constraint firstAttribute="height" constant="134" id="IWA-3c-hfs"/>
-                                    <constraint firstItem="3iP-qz-uP1" firstAttribute="top" secondItem="oDE-A6-7b0" secondAttribute="top" constant="8" id="S0q-Sk-Fko"/>
+                                    <constraint firstItem="3iP-qz-uP1" firstAttribute="top" secondItem="oDE-A6-7b0" secondAttribute="top" constant="11" id="S0q-Sk-Fko"/>
                                     <constraint firstAttribute="centerX" secondItem="E9d-xz-2Nz" secondAttribute="centerX" id="SgM-GG-SYv"/>
                                     <constraint firstItem="3iP-qz-uP1" firstAttribute="top" secondItem="oDE-A6-7b0" secondAttribute="top" constant="8" id="UNx-6C-TBj"/>
-                                    <constraint firstAttribute="centerY" secondItem="E9d-xz-2Nz" secondAttribute="centerY" id="VYI-d5-pgJ"/>
+                                    <constraint firstAttribute="centerY" secondItem="E9d-xz-2Nz" secondAttribute="centerY" constant="-7" id="VYI-d5-pgJ"/>
                                     <constraint firstAttribute="centerX" secondItem="3iP-qz-uP1" secondAttribute="centerX" constant="1" id="Y4K-Qo-q3b"/>
                                     <constraint firstAttribute="width" secondItem="oDE-A6-7b0" secondAttribute="height" multiplier="140:67" id="Z6E-CO-2ye"/>
                                     <constraint firstAttribute="width" constant="190" id="bNT-N7-h1V"/>
@@ -264,7 +264,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EZ-Mh-eh3">
-                                        <rect key="frame" x="140" y="-32" width="320" height="162"/>
+                                        <rect key="frame" x="140" y="-30" width="320" height="162"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </pickerView>
                                 </subviews>
@@ -277,7 +277,7 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="157" id="Ol3-9Y-Yx8"/>
                                     <constraint firstItem="pjm-ha-xNU" firstAttribute="top" secondItem="Kcx-9e-KdH" secondAttribute="top" constant="8" id="RIL-90-Xsh"/>
                                     <constraint firstAttribute="width" constant="190" id="UHg-1o-K05"/>
-                                    <constraint firstAttribute="centerY" secondItem="3EZ-Mh-eh3" secondAttribute="centerY" id="VoT-FD-6VQ"/>
+                                    <constraint firstAttribute="centerY" secondItem="3EZ-Mh-eh3" secondAttribute="centerY" constant="-2" id="VoT-FD-6VQ"/>
                                     <constraint firstAttribute="centerX" secondItem="pjm-ha-xNU" secondAttribute="centerX" id="W9h-ow-LqR"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="157" id="fVO-H3-Rdq"/>
                                     <constraint firstAttribute="bottom" secondItem="3EZ-Mh-eh3" secondAttribute="bottom" constant="-30" id="nro-mW-1KQ"/>
@@ -306,13 +306,13 @@
                                 <rect key="frame" x="0.0" y="402" width="600" height="99"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sanity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ua3-jj-I97">
-                                        <rect key="frame" x="276" y="8" width="48" height="21"/>
+                                        <rect key="frame" x="276" y="13" width="48" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fe-EW-wMe">
-                                        <rect key="frame" x="140" y="-32" width="320" height="162"/>
+                                        <rect key="frame" x="140" y="-27" width="320" height="162"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </pickerView>
                                 </subviews>
@@ -324,9 +324,9 @@
                                     <constraint firstAttribute="centerX" secondItem="ua3-jj-I97" secondAttribute="centerX" id="Dyd-ey-3PI"/>
                                     <constraint firstItem="ua3-jj-I97" firstAttribute="top" secondItem="op7-2T-1eZ" secondAttribute="top" constant="8" id="IMC-Qi-ADg"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="157" id="QT2-Z2-dRE"/>
-                                    <constraint firstItem="ua3-jj-I97" firstAttribute="top" secondItem="op7-2T-1eZ" secondAttribute="top" constant="8" id="R8A-Ef-oVe"/>
+                                    <constraint firstItem="ua3-jj-I97" firstAttribute="top" secondItem="op7-2T-1eZ" secondAttribute="top" constant="13" id="R8A-Ef-oVe"/>
                                     <constraint firstAttribute="width" constant="190" id="U1k-Rv-SVU"/>
-                                    <constraint firstAttribute="centerY" secondItem="2Fe-EW-wMe" secondAttribute="centerY" id="bGF-2y-6VD"/>
+                                    <constraint firstAttribute="centerY" secondItem="2Fe-EW-wMe" secondAttribute="centerY" constant="-5" id="bGF-2y-6VD"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="102" id="e3q-vz-KGe"/>
                                     <constraint firstItem="ua3-jj-I97" firstAttribute="top" secondItem="op7-2T-1eZ" secondAttribute="top" constant="8" id="wFk-Js-4q0"/>
                                     <constraint firstAttribute="height" constant="134" id="zkR-P3-FKk"/>
@@ -483,9 +483,9 @@
                         <outlet property="characterImageView" destination="rh3-W2-BTq" id="oAn-3M-rR4"/>
                         <outlet property="characterInfo" destination="fbK-fi-4FO" id="WpF-Em-i1n"/>
                         <outlet property="characterName" destination="If8-zW-Qli" id="wGA-Un-OWF"/>
-                        <outlet property="knowledgePicker" destination="2Fe-EW-wMe" id="iTu-4B-cll"/>
+                        <outlet property="knowledgePicker" destination="3EZ-Mh-eh3" id="0uu-jf-8NV"/>
                         <outlet property="mightPicker" destination="ygL-ns-DFf" id="WZR-k8-RLy"/>
-                        <outlet property="sanityPicker" destination="3EZ-Mh-eh3" id="RrV-Th-Gft"/>
+                        <outlet property="sanityPicker" destination="2Fe-EW-wMe" id="7bQ-z5-yiQ"/>
                         <outlet property="speedPicker" destination="E9d-xz-2Nz" id="W1h-jr-56k"/>
                     </connections>
                 </viewController>
