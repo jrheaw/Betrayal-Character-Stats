@@ -18,6 +18,7 @@ class CharacterCard {
     let sideA: Character?
     let sideB: Character?
     var aSelected = true
+    var icon: UIImage?
     
     var backgroundColor: UIColor = UIColor.clearColor()
     
@@ -25,6 +26,9 @@ class CharacterCard {
         if let characterType = CharacterType(rawValue: index) {
             let characterDataInstance = CharacterData()
             let characterData: [String:Any] = characterDataInstance.characterDataFromCharacterType(characterType)
+            
+            let iconName = characterData["icon"] as String!
+            icon = UIImage(named: iconName)
             
             let backgroundColorDictionary = characterData["backgroundColor"]! as [String:Double]
             backgroundColor = colorFromDictionary(backgroundColorDictionary)

@@ -17,10 +17,12 @@ class Character {
     var knowledge: CharacterStat
     
     var name: String
+    var info: String
     var icon: UIImage?
     
     init(characterData: [String:String], characterStats: [String:[String:Any]]) {
         self.name = characterData["name"]!
+        self.info = characterData["info"]!
         let iconName = characterData["icon"] as String!
         icon = UIImage(named: iconName)
         

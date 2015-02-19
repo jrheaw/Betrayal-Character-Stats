@@ -16,11 +16,14 @@ class CharacterDetailViewController : UIViewController,UIPickerViewDataSource,UI
     
     @IBOutlet weak var characterName: UILabel!
     @IBOutlet weak var characterImageView: UIImageView!
+    @IBOutlet weak var characterInfo: UILabel!
     
     @IBOutlet weak var mightPicker: UIPickerView!
     @IBOutlet weak var speedPicker: UIPickerView!
     @IBOutlet weak var sanityPicker: UIPickerView!
     @IBOutlet weak var knowledgePicker: UIPickerView!
+    
+ //   @IBOutlet weak var changeCharacterButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,45 +51,13 @@ class CharacterDetailViewController : UIViewController,UIPickerViewDataSource,UI
         characterImageView.image = selectedCharacter?.icon
         characterImageView.contentMode = UIViewContentMode.ScaleAspectFit
         characterName.text = selectedCharacter!.name
+        characterInfo.text = selectedCharacter!.info
     }
-    
-//    func setSegmentTitlesAndSelection(stat: CharacterStat, segment: UISegmentedControl, stepper: UIStepper) {
-//        stepper.maximumValue = 0
-//        stepper.maximumValue = 7
-//        segment.userInteractionEnabled = false
-//        if let values: [Int] = stat.valuesArray as? [Int] {
-//            for var index = 0; index < values.count; index++ {
-//                let title = values[index]
-//                segment.setTitle(String(title), forSegmentAtIndex:index)
-//                if(index == stat.getCurrentIndex()) {
-//                    segment.selectedSegmentIndex = index
-//                    stepper.value = Double(index)
-//                }
-//            }
-//        }
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-//    @IBAction func changeStat(sender: UIStepper) {
-//        if(sender === mightStepper) {
-//            mightBar.selectedSegmentIndex = Int(sender.value)
-//            selectedChracter!.might.currentValueIndex = Int(sender.value)
-//        } else if (sender === sanityStepper) {
-//            sanityBar.selectedSegmentIndex = Int(sender.value)
-//            selectedChracter!.sanity.currentValueIndex = Int(sender.value)
-//        } else if (sender === speedStepper) {
-//            speedBar.selectedSegmentIndex = Int(sender.value)
-//            selectedChracter!.speed.currentValueIndex = Int(sender.value)
-//        } else if (sender === knowledgeStepper) {
-//            knowledgeBar.selectedSegmentIndex = Int(sender.value)
-//            selectedChracter!.knowledge.currentValueIndex = Int(sender.value)
-//        }
-//        
-//    }
     
     @IBAction func switchCharacter(sender: AnyObject) {
         characterCard?.flipCard()
@@ -137,7 +108,7 @@ class CharacterDetailViewController : UIViewController,UIPickerViewDataSource,UI
     }
     
     func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-        return 10
+        return 0
     }
     
     /*

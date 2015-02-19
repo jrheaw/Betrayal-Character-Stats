@@ -22,7 +22,6 @@ class CharacterMasterViewController: UIViewController {
     var characterCardArray: [CharacterCard] = []
     
     override func viewDidLoad() {
-        println("view did load")
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -35,11 +34,12 @@ class CharacterMasterViewController: UIViewController {
             curiousBoyImageView
         ]
         
+        // Set background color and image of character select image views
         for index in 0..<characterImageViewArray.count {
             let characterCard = CharacterCard(index: index)
             characterCardArray.append(characterCard)
             let characterImageView = characterImageViewArray[index]
-            characterImageView.image = characterCard.getSelectedCharacter()?.icon
+            characterImageView.image = characterCard.icon
             characterImageView.backgroundColor = characterCard.backgroundColor
         }
     }
