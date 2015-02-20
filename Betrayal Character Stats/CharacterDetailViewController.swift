@@ -11,7 +11,6 @@ import UIKit
 class CharacterDetailViewController : UIViewController,UIPickerViewDataSource,UIPickerViewDelegate{
     
     var characterCard: CharacterCard?
-    var characterCardArray: [CharacterCard]?
     var selectedCharacter: Character?
     
     @IBOutlet weak var characterName: UILabel!

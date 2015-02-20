@@ -55,7 +55,6 @@ class CharacterMasterViewController: UIViewController {
             if let index = find(characterImageViewArray, characterImageView) {
                 let characterDetailController = segue.destinationViewController as CharacterDetailViewController
                 characterDetailController.characterCard = characterCardArray[index]
-                characterDetailController.characterCardArray = characterCardArray
             }
         }
     }
