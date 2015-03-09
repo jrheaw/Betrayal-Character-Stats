@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GXx-mK-j5S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GXx-mK-j5S">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -18,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="squirrelIcon_60x60" translatesAutoresizingMaskIntoConstraints="NO" id="hyY-ww-Y1b">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hyY-ww-Y1b">
                                 <rect key="frame" x="4" y="68" width="294" height="173"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -26,7 +27,7 @@
                                     <outletCollection property="gestureRecognizers" destination="FUs-sr-mOT" appends="YES" id="jiq-wd-f80"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="squirrelIcon_60x60" translatesAutoresizingMaskIntoConstraints="NO" id="CFG-VE-G5N">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CFG-VE-G5N">
                                 <rect key="frame" x="4" y="423" width="294" height="173"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -34,7 +35,7 @@
                                     <outletCollection property="gestureRecognizers" destination="K6h-b5-YOz" appends="YES" id="iLf-R1-dLn"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="squirrelIcon_60x60" translatesAutoresizingMaskIntoConstraints="NO" id="xa8-Yx-K9o">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xa8-Yx-K9o">
                                 <rect key="frame" x="302" y="68" width="294" height="173"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -42,7 +43,7 @@
                                     <outletCollection property="gestureRecognizers" destination="Mi2-Yf-UGN" appends="YES" id="TOU-yc-lz1"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="squirrelIcon_60x60" translatesAutoresizingMaskIntoConstraints="NO" id="E2b-qd-Ss5">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E2b-qd-Ss5">
                                 <rect key="frame" x="302" y="245" width="294" height="174"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -50,7 +51,7 @@
                                     <outletCollection property="gestureRecognizers" destination="qXf-ao-R76" appends="YES" id="bTn-wg-dXV"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="squirrelIcon_60x60" translatesAutoresizingMaskIntoConstraints="NO" id="Nfg-L8-syC">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nfg-L8-syC">
                                 <rect key="frame" x="302" y="423" width="294" height="173"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -58,7 +59,7 @@
                                     <outletCollection property="gestureRecognizers" destination="RtV-C8-DfZ" appends="YES" id="5dk-v7-uLc"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="squirrelIcon_60x60" translatesAutoresizingMaskIntoConstraints="NO" id="sDO-Iy-IiM">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sDO-Iy-IiM">
                                 <rect key="frame" x="4" y="245" width="294" height="174"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -381,7 +382,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="squirrelIcon_60x60" translatesAutoresizingMaskIntoConstraints="NO" id="rh3-W2-BTq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rh3-W2-BTq">
                                 <rect key="frame" x="16" y="84" width="99" height="99"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rh3-W2-BTq" secondAttribute="height" multiplier="15:26" id="HwU-nE-yeg"/>
@@ -516,6 +517,5 @@
     </scenes>
     <resources>
         <image name="arrow" width="24" height="24"/>
-        <image name="squirrelIcon_60x60" width="60" height="60"/>
     </resources>
 </document>
