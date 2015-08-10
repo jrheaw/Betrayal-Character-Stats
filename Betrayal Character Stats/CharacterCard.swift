@@ -11,31 +11,58 @@ import UIKit
 
 class CharacterCard {
     
-    enum CharacterType: Int {
+    enum CharacterType: Int, Printable {
         case Jock = 0, FinalGirl, Professor, FortuneTeller, LittleGirl, CuriousBoy
+        var description : String {
+            get {
+                switch(self) {
+                case Jock:
+                    return "Jock"
+                case FinalGirl:
+                    return "FinalGirl"
+                case Professor:
+                    return "return"
+                case FortuneTeller:
+                    return "FortuneTeller"
+                case LittleGirl:
+                    return "LittleGirl"
+                case CuriousBoy:
+                    return "CuriousBoy"
+
+                }
+            }
+        }
     }
     
-    let sideA: Character?
-    let sideB: Character?
+    var sideA: Character?
+    var sideB: Character?
     var aSelected = true
     var icon: UIImage?
+    var characterType: CharacterType?
     
     var backgroundColor: UIColor = UIColor.clearColor()
     
+    var userDefaults = NSUserDefaults.standardUserDefaults()
+    
     init(index: Int) {
-        if let characterType = CharacterType(rawValue: index) {
+        if let characterTypeFromIndex = CharacterType(rawValue: index) {
+            characterType = characterTypeFromIndex
             let characterDataInstance = CharacterData()
-            let characterData: [String:Any] = characterDataInstance.characterDataFromCharacterType(characterType)
+            let characterData: [String:Any] = characterDataInstance.characterDataFromCharacterType(characterTypeFromIndex)
             
-            let iconName = characterData["icon"] as String!
+            if let aSelectedStored:Bool = userDefaults.valueForKey("\(characterType!).aSelected") as? Bool {
+                aSelected = aSelectedStored
+            }
+            
+            let iconName = characterData["icon"] as! String!
             icon = UIImage(named: iconName)
             
-            let backgroundColorDictionary = characterData["backgroundColor"]! as [String:Double]
+            let backgroundColorDictionary = characterData["backgroundColor"]! as! [String:Double]
             backgroundColor = colorFromDictionary(backgroundColorDictionary)
             
-            let characterStats:[String:[String:[String:Any]]] = characterDataInstance.characterStatsFromCharacterType(characterType)
-            sideA = Character(characterData:characterData["a"]! as [String:String], characterStats: characterStats["a"]! as [String:[String:Any]])
-            sideB = Character(characterData:characterData["b"]! as [String:String], characterStats: characterStats["b"]! as [String:[String:Any]])
+            let characterStats:[String:[String:[String:Any]]] = characterDataInstance.characterStatsFromCharacterType(characterTypeFromIndex)
+            sideA = Character(characterData:characterData["a"]! as! [String:String], characterStats: characterStats["a"]! as [String:[String:Any]])
+            sideB = Character(characterData:characterData["b"]! as! [String:String], characterStats: characterStats["b"]! as [String:[String:Any]])
         }
     }
     
@@ -49,6 +76,7 @@ class CharacterCard {
     
     func flipCard() {
         aSelected = !aSelected
+        userDefaults.setBool(aSelected, forKey: "\(characterType!).aSelected")
     }
     
     func getSelectedCharacter() -> Character? {

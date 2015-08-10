@@ -22,14 +22,15 @@ class CharacterDetailViewController : UIViewController,UIPickerViewDataSource,UI
     @IBOutlet weak var sanityPicker: UIPickerView!
     @IBOutlet weak var knowledgePicker: UIPickerView!
     
- //   @IBOutlet weak var changeCharacterButton: UIBarButtonItem!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         selectedCharacter = characterCard!.getSelectedCharacter()
         setUpCharaterStats()
         self.view.backgroundColor = characterCard?.backgroundColor
+    }
+    
+    override func viewWillAppear(animated: Bool) {
     }
     
     func setUpPickerView(pickerView: UIPickerView, _ forStat: CharacterStat) {
@@ -43,10 +44,10 @@ class CharacterDetailViewController : UIViewController,UIPickerViewDataSource,UI
     }
     
     func setUpCharaterStats() {
-        setUpPickerView(mightPicker, selectedCharacter!.might)
-        setUpPickerView(speedPicker, selectedCharacter!.speed)
-        setUpPickerView(sanityPicker, selectedCharacter!.sanity)
-        setUpPickerView(knowledgePicker, selectedCharacter!.knowledge)
+        setUpPickerView(mightPicker, selectedCharacter!.might!)
+        setUpPickerView(speedPicker, selectedCharacter!.speed!)
+        setUpPickerView(sanityPicker, selectedCharacter!.sanity!)
+        setUpPickerView(knowledgePicker, selectedCharacter!.knowledge!)
         characterImageView.image = selectedCharacter?.icon
         characterImageView.contentMode = UIViewContentMode.ScaleAspectFit
         characterName.text = selectedCharacter!.name
@@ -90,16 +91,17 @@ class CharacterDetailViewController : UIViewController,UIPickerViewDataSource,UI
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch(pickerView) {
         case mightPicker:
-            selectedCharacter!.might.currentValueIndex = row - 1
+            selectedCharacter!.updateCharacterStatIndex(.might, index: row - 1)
         case speedPicker:
-            selectedCharacter!.speed.currentValueIndex = row - 1
+            selectedCharacter!.updateCharacterStatIndex(.speed, index: row - 1)
         case sanityPicker:
-            selectedCharacter!.sanity.currentValueIndex = row - 1
+            selectedCharacter!.updateCharacterStatIndex(.sanity, index: row - 1)
         case knowledgePicker:
-            selectedCharacter!.knowledge.currentValueIndex = row - 1
+            selectedCharacter!.updateCharacterStatIndex(.knowledge, index: row - 1)
         default:
             return
         }
+        var userDefaults = NSUserDefaults.standardUserDefaults()
     }
     
     func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
@@ -118,22 +120,27 @@ class CharacterDetailViewController : UIViewController,UIPickerViewDataSource,UI
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
         // Get the value of the label from the char stat array, or skull if the row is 0
         var labelText: String
+        var isDefault = false;
         if(row == 0) {
             labelText = "💀"
         } else {
             switch(pickerView) {
             case mightPicker:
-                let value = selectedCharacter!.might.valuesArray[row - 1] as? Int
+                let value = selectedCharacter!.might!.valuesArray[row - 1] as? Int
                 labelText = String(value!)
+                isDefault = row - 1 == selectedCharacter!.might!.defaultIndex
             case speedPicker:
-                let value = selectedCharacter!.speed.valuesArray[row - 1] as? Int
+                let value = selectedCharacter!.speed!.valuesArray[row - 1] as? Int
                 labelText = String(value!)
+                isDefault = row - 1 == selectedCharacter!.speed!.defaultIndex
             case sanityPicker:
-                let value = selectedCharacter!.sanity.valuesArray[row - 1] as? Int
+                let value = selectedCharacter!.sanity!.valuesArray[row - 1] as? Int
                 labelText = String(value!)
+                isDefault = row - 1 == selectedCharacter!.sanity!.defaultIndex
             case knowledgePicker:
-                let value = selectedCharacter!.knowledge.valuesArray[row - 1] as? Int
+                let value = selectedCharacter!.knowledge!.valuesArray[row - 1] as? Int
                 labelText = String(value!)
+                isDefault = row - 1 == selectedCharacter!.knowledge!.defaultIndex
             default:
                 labelText = ""
             }
@@ -151,7 +158,7 @@ class CharacterDetailViewController : UIViewController,UIPickerViewDataSource,UI
         label.text = labelText
         label.font = UIFont.systemFontOfSize(64)
         label.textAlignment = .Center
-        label.textColor = UIColor.whiteColor()
+        label.textColor =  isDefault ? UIColor.greenColor() : UIColor.whiteColor()
         //label.numberOfLines = 2
         //label.lineBreakMode = UILineBreakModeWordWrap;
         label.backgroundColor = UIColor.clearColor()

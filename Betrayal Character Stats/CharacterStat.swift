@@ -9,18 +9,34 @@
 import Foundation
 
 class CharacterStat {
-    enum StatType {
+    enum StatType : Printable {
         case speed, might, sanity, knowledge
+        var description : String {
+            get {
+                switch(self) {
+                case speed:
+                    return "speed"
+                case might:
+                    return "might"
+                case sanity:
+                    return "sanity"
+                case knowledge:
+                    return "knowledge"
+                }
+            }
+        }
     }
     
     var statType: StatType
     var valuesArray = []
     var currentValueIndex: Int
+    var defaultIndex: Int
 
-    init(statType: StatType, startingIndex: Int, values: [Int]) {
+    init(statType: StatType, startingIndex: Int, defaultIndex: Int, values: [Int]) {
         self.statType = statType
-        self.valuesArray = values;
+        self.valuesArray = values
         self.currentValueIndex = startingIndex
+        self.defaultIndex = defaultIndex
     }
     
     func getCurrentIndex() -> Int {

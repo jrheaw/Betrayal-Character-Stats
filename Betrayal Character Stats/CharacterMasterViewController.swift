@@ -51,9 +51,9 @@ class CharacterMasterViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showCharacterDetails" {
-            let characterImageView = sender!.view as UIImageView
+            let characterImageView = sender!.view as! UIImageView
             if let index = find(characterImageViewArray, characterImageView) {
-                let characterDetailController = segue.destinationViewController as CharacterDetailViewController
+                let characterDetailController = segue.destinationViewController as! CharacterDetailViewController
                 characterDetailController.characterCard = characterCardArray[index]
             }
         }
@@ -67,6 +67,10 @@ class CharacterMasterViewController: UIViewController {
         var refreshAlert = UIAlertController(title: "Reset Characters", message: "All current stats will be lost.", preferredStyle: UIAlertControllerStyle.Alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+            //remove all NSUserDefaults
+            if let appDomain = NSBundle.mainBundle().bundleIdentifier {
+                NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain)
+            }
             self.characterCardArray.removeAll()
             for index in 0..<self.characterImageViewArray.count {
                 let characterCard = CharacterCard(index: index)
