@@ -29,23 +29,23 @@ class Character {
         icon = UIImage(named: iconName)
         
         var speed = characterStats["speed"]! as [String:Any]
-        var speedStartIndex = getStartingIndex(.speed, stats: speed)
-        var speedArray = speed["valuesArray"]! as! [Int]
+        let speedStartIndex = getStartingIndex(.speed, stats: speed)
+        let speedArray = speed["valuesArray"]! as! [Int]
         self.speed = CharacterStat(statType: .speed, startingIndex: speedStartIndex, defaultIndex: getDefaultIndexOfStats(speed), values: speedArray)
         
         var might = characterStats["might"]! as [String:Any]
-        var mightStartIndex = getStartingIndex(.might, stats: might)
-        var mightArray = might["valuesArray"]! as! [Int]
+        let mightStartIndex = getStartingIndex(.might, stats: might)
+        let mightArray = might["valuesArray"]! as! [Int]
         self.might = CharacterStat(statType: .might, startingIndex: mightStartIndex, defaultIndex: getDefaultIndexOfStats(might), values: mightArray)
         
         var sanity = characterStats["sanity"]! as [String:Any]
-        var sanityStartIndex = getStartingIndex(.sanity, stats: sanity)
-        var sanityArray = sanity["valuesArray"]! as! [Int]
+        let sanityStartIndex = getStartingIndex(.sanity, stats: sanity)
+        let sanityArray = sanity["valuesArray"]! as! [Int]
         self.sanity = CharacterStat(statType: .sanity, startingIndex: sanityStartIndex, defaultIndex: getDefaultIndexOfStats(sanity), values: sanityArray)
         
         var knowledge = characterStats["knowledge"]! as [String:Any]
-        var knowledgeStartIndex = getStartingIndex(.knowledge, stats: knowledge)
-        var knowledgeArray = knowledge["valuesArray"]! as! [Int]
+        let knowledgeStartIndex = getStartingIndex(.knowledge, stats: knowledge)
+        let knowledgeArray = knowledge["valuesArray"]! as! [Int]
         self.knowledge = CharacterStat(statType: .knowledge, startingIndex: knowledgeStartIndex, defaultIndex: getDefaultIndexOfStats(knowledge), values: knowledgeArray)
     }
     

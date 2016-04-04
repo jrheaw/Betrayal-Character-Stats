@@ -101,7 +101,6 @@ class CharacterDetailViewController : UIViewController,UIPickerViewDataSource,UI
         default:
             return
         }
-        var userDefaults = NSUserDefaults.standardUserDefaults()
     }
     
     func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
@@ -117,7 +116,7 @@ class CharacterDetailViewController : UIViewController,UIPickerViewDataSource,UI
         degrees like the picker is. We add a skull for 0 stat value at the beginning
 
     */
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
         // Get the value of the label from the char stat array, or skull if the row is 0
         var labelText: String
         var isDefault = false;
@@ -148,8 +147,8 @@ class CharacterDetailViewController : UIViewController,UIPickerViewDataSource,UI
         }
         
         // Transform the label 90 degrees
-        var rect = CGRectMake(0, 0, 60, 50);
-        var label = UILabel(frame: rect)
+        let rect = CGRectMake(0, 0, 64, 50);
+        let label = UILabel(frame: rect)
         var rotate = CGAffineTransformMakeRotation(3.14/2);
         rotate = CGAffineTransformScale(rotate, 0.25, 2);
         label.transform = rotate

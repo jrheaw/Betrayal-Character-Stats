@@ -11,7 +11,7 @@ import UIKit
 
 class CharacterCard {
     
-    enum CharacterType: Int, Printable {
+    enum CharacterType: Int, CustomStringConvertible {
         case Jock = 0, FinalGirl, Professor, FortuneTeller, LittleGirl, CuriousBoy
         var description : String {
             get {

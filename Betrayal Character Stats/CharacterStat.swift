@@ -9,7 +9,7 @@
 import Foundation
 
 class CharacterStat {
-    enum StatType : Printable {
+    enum StatType : CustomStringConvertible {
         case speed, might, sanity, knowledge
         var description : String {
             get {
@@ -44,10 +44,10 @@ class CharacterStat {
     }
     
     func incrementCurrentIndex() {
-        currentValueIndex++
+        currentValueIndex += 1
     }
     
     func decrementCurrentIndex() {
-        currentValueIndex--
+        currentValueIndex -= 1
     }
 }
